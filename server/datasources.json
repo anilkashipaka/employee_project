@@ -1,0 +1,10 @@
+{
+  "db": {
+    "url": "mongodb+srv://monkey:1234@cluster0.appwnkj.mongodb.net/employee?retryWrites=true&w=majority",
+    "database": "employee",
+    "password": "1234",
+    "name": "db",
+    "user": "monkey",
+    "connector": "mongodb"
+  }
+}

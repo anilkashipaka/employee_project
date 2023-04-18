@@ -1,0 +1,72 @@
+{
+  "name": "myUser",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "username": {
+      "type": "string",
+      "required": false
+    },
+    "password": {
+      "type": "string",
+      "required": true
+    },
+    "role": {
+      "type": "string",
+      "required": false
+    },
+    "managerID": {
+      "type": "string",
+      "required": false
+    },
+    "userID": {
+      "type": "string",
+      "required": false
+    },
+    "noofSickleaves": {
+      "type": "Number",
+      "required": false,
+      "default": 12
+    },
+    "noofVacation": {
+      "type": "Number",
+      "required": false,
+      "default": 25
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "deleteUser"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "find"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "getUsers"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$unauthenticated",
+      "permission": "DENY"
+    }
+  ],
+  "methods": {}
+}
